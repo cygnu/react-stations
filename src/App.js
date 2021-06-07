@@ -12,7 +12,7 @@ export const App = () => {
   const [docUrl, setDocUrl] = React.useState(initalState);
 
   const getDocURL = () => {
-    setDocUrl((docUrl) => docUrl);
+    setDocUrl();
   }
 
   return (
@@ -20,6 +20,7 @@ export const App = () => {
       <h1>Dogアプリ</h1>
       <p>犬の画像を表示するサイトです。</p>
       <img src={docUrl} />
+      <button onClick={() => setDocUrl("https://images.dog.ceo/breeds/redbone/n02090379_4950.jpg")}>更新</button>
     </header>
   )
 }
