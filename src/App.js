@@ -10,7 +10,9 @@ import './App.css'
 export const App = () => {
   return (
     <header>
-      <div>Dogアプリ</div>
+      <h1>Dogアプリ</h1>
+      <p>犬の画像を表示するサイトです。</p>
+      <img src="https://images.dog.ceo/breeds/akita/Akita_inu_blanc.jpg" />
     </header>
   )
 }
