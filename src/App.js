@@ -8,11 +8,18 @@ import './App.css'
  * @type {React.FC}
  */
 export const App = () => {
+  const initalState = "https://images.dog.ceo/breeds/akita/Akita_inu_blanc.jpg";
+  const [docUrl, setDocUrl] = React.useState(initalState);
+
+  const getDocURL = () => {
+    setDocUrl((docUrl) => docUrl);
+  }
+
   return (
     <header>
       <h1>Dogアプリ</h1>
       <p>犬の画像を表示するサイトです。</p>
-      <img src="https://images.dog.ceo/breeds/akita/Akita_inu_blanc.jpg" />
+      <img src={docUrl} />
     </header>
   )
 }
