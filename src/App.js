@@ -9,18 +9,25 @@ import './App.css'
  */
 export const App = () => {
   const initalState = "https://images.dog.ceo/breeds/akita/Akita_inu_blanc.jpg";
-  const [docUrl, setDocUrl] = React.useState(initalState);
 
-  const getDocURL = () => {
-    setDocUrl();
-  }
+  const [docUrl, setDocUrl] = React.useState(initalState);
 
   return (
     <header>
       <h1>Dogアプリ</h1>
       <p>犬の画像を表示するサイトです。</p>
       <img src={docUrl} />
-      <button onClick={() => setDocUrl("https://images.dog.ceo/breeds/redbone/n02090379_4950.jpg")}>更新</button>
+      <button
+        onClick={
+          () => fetch("https://dog.ceo/api/breeds/image/random")
+            .then(response => response.json())
+            .then((data) => {
+              if (data.status === "success") {
+                setDocUrl(data.message)
+              }
+            })
+        }
+      >更新</button>
     </header>
-  )
+  );
 }
