@@ -2,19 +2,17 @@
 
 import React from 'react'
 import { DogImage } from './DogImage'
-import './App.css'
 
 export const Description = () => {
-  const initialState = "https://images.dog.ceo/breeds/akita/Akita_inu_blanc.jpg";
-  const [docUrl, setDocUrl] = React.useState(initialState);
+  const [docUrl, setDocUrl] = React.useState('https://images.dog.ceo/breeds/akita/Akita_inu_blanc.jpg');
 
   return (
-    <main className="container">
-      <p className="cTitle">犬の画像を表示するサイトです。</p>
-      <div className="cDoc">
+    <main className="description">
+      <p className="dTitle">犬の画像を表示するサイトです。</p>
+      <div className="dDoc">
         <DogImage url={docUrl} />
         <button
-          className="cDocButton"
+          className="dDocButton"
           onClick={
             () => fetch("https://dog.ceo/api/breeds/image/random")
               .then(response => response.json())
@@ -24,7 +22,7 @@ export const Description = () => {
                 }
               })
           }
-        >更新</button>
+        >更 新</button>
       </div>
     </main>
   );

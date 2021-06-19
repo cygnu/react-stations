@@ -1,3 +1,7 @@
+/* App */
+.container {}
+
+/* Header */
 .header {
     display: flex;
     flex-direction: column;
@@ -5,30 +9,77 @@
     background-color: #F5F5F5;
 }
 
-.container {
+/* Description */
+.description {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 16px;
     margin-top: 20px;
 }
 
-.cTitle {
+.dTitle {
     margin-right: 10px;
 }
 
-.cDoc {
+.dDoc {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
 
-.cDocImage {
-    max-height: 200px;
-    margin-bottom: 10px;
-}
-
-.cDocButton {
+/* Description */
+.dDocButton {
     height: 32px;
     width: 100px;
+    margin-top: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
     text-align: center;
+}
+
+/* BreedsSelect */
+.breedsSelect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.bSParagraph {
+}
+
+.bSContainer {
+    margin: 2em;
+}
+
+.bSDropdown {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.bSButton {
+    height: 32px;
+    width: 100px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+    text-align: center;
+}
+
+/* DogListContainer */
+.docImagesList {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.docImageList {
+    width: 33%;
+    padding: 10px;
+    list-style-type: none;
 }

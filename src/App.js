@@ -13,10 +13,10 @@ import './App.css'
  */
 export const App = () => {
   return (
-    <React.Fragment>
+    <div className="container">
       <Header />
       <Description />
       <DogListContainer />
-    </React.Fragment>
+    </div>
   );
 }
